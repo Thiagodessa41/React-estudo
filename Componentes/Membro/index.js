@@ -1,36 +1,19 @@
 import React, {Component} from "react";
 
 class Membro extends Component{
-
-    constructor(props){
-        super(props);
-        this.state ={
-            nome: props.nome
-        };
-        this.entrar=this.entrar.bind(this);
-    }
-entrar(){
-    this.setState({nome: 'Thiago'})
-}
-
     render(){
         return(
-            <div>
+            <div key={this.props.id}>
                 <h3>
-               Bem vindo(a) {this.state.nome}
+                    {this.props.username}
                 </h3>
-
-                <button onClick={this.entrar}> 
-                    Entrar como Thiago
-                </button>
-
-                <button onClick={()=> this.setState({nome: ''}) }>
-                    Sair
-                </button>
-              
-            </div>
-        )
+                <a> {this.props.curtidas > 1 ? this.props.curtidas + ' curtidas ' : this.props.curtidas + ' curtida '} 
+                { this.props.comentarios > 1 ? this.props.comentarios + '  comentarios' : this.props.comentarios + ' '}  </a>
+                  <hr/>  
+            </div>    
+        );
     }
 }
+
 
 export default Membro;
