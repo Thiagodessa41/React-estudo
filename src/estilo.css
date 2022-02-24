@@ -1,0 +1,21 @@
+.container{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    }
+   .img{
+       width: 250px;
+       height: 250px;
+       margin-top: 20px;
+   } 
+
+   .textoFrase{
+       font-style: italic;
+       color:#df9c5d;
+       text-align: center;
+   }
+
+  
